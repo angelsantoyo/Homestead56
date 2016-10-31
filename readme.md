@@ -19,6 +19,12 @@ For more information on how to setup homestead official documentation [is locate
 
 ```cd ~/Homestead56; bash init.sh; vagrant up```
 
+## Or Setup Brand New Homestead56
+
+ ```git clone https://github.com/gjrdiesel/Homestead56.git ~/Homestead56```
+
+```cd ~/Homestead56; bash init.sh; vagrant up```
+
 ## Other:
 * Installing mongo? Run ```bash ~/Homestead56/other/install-mongo.sh```
 * Something messed up? Completely reinstall by running ```bash ~/Homestead56/other/remove-box.sh``` then redo the install instructions from above.
