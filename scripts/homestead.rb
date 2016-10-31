@@ -149,6 +149,11 @@ class Homestead
         s.args = [site["map"], site["to"], site["port"] ||= "80", site["ssl"] ||= "443"]
       end
 
+      # Add Login message for vm
+      config.vm.provision "shell" do |s|
+        s.path = scriptDir + "/server-message.sh"
+      end
+
       # Configure The Cron Schedule
       if (site.has_key?("schedule"))
         config.vm.provision "shell" do |s|
@@ -218,6 +223,16 @@ class Homestead
           settings["blackfire"][0]["client-token"]
         ]
       end
+    end
+
+    # Install zsh
+    config.vm.provision "shell" do |s|
+      s.path = scriptDir + "/serve-zsh.sh"
+    end
+
+     # Install xdebug
+    config.vm.provision "shell" do |s|
+      s.path = scriptDir + "/serve-xdebug.sh"
     end
   end
 end

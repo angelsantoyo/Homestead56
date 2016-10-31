@@ -14,11 +14,16 @@ folders:
       to: /home/vagrant/Code
 
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Laravel/public
+    - map: kraken.dev
+      to: /home/vagrant/Code/symfony/kraken/web
+      type: symfony
+    - map: gaia.dev
+      to: /home/vagrant/Code/Magento/gaia/public_html
+      type: magento
 
 databases:
     - homestead
+    - gaiadev
 
 # blackfire:
 #     - id: foo
